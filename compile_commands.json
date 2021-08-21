@@ -1,0 +1,647 @@
+[
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/builder.cc.o -c /Users/markfqwu/leveldb/db/builder.cc",
+    "file": "/Users/markfqwu/leveldb/db/builder.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/c.cc.o -c /Users/markfqwu/leveldb/db/c.cc",
+    "file": "/Users/markfqwu/leveldb/db/c.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/db_impl.cc.o -c /Users/markfqwu/leveldb/db/db_impl.cc",
+    "file": "/Users/markfqwu/leveldb/db/db_impl.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/db_iter.cc.o -c /Users/markfqwu/leveldb/db/db_iter.cc",
+    "file": "/Users/markfqwu/leveldb/db/db_iter.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/dbformat.cc.o -c /Users/markfqwu/leveldb/db/dbformat.cc",
+    "file": "/Users/markfqwu/leveldb/db/dbformat.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/dumpfile.cc.o -c /Users/markfqwu/leveldb/db/dumpfile.cc",
+    "file": "/Users/markfqwu/leveldb/db/dumpfile.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/filename.cc.o -c /Users/markfqwu/leveldb/db/filename.cc",
+    "file": "/Users/markfqwu/leveldb/db/filename.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/log_reader.cc.o -c /Users/markfqwu/leveldb/db/log_reader.cc",
+    "file": "/Users/markfqwu/leveldb/db/log_reader.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/log_writer.cc.o -c /Users/markfqwu/leveldb/db/log_writer.cc",
+    "file": "/Users/markfqwu/leveldb/db/log_writer.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/memtable.cc.o -c /Users/markfqwu/leveldb/db/memtable.cc",
+    "file": "/Users/markfqwu/leveldb/db/memtable.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/repair.cc.o -c /Users/markfqwu/leveldb/db/repair.cc",
+    "file": "/Users/markfqwu/leveldb/db/repair.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/table_cache.cc.o -c /Users/markfqwu/leveldb/db/table_cache.cc",
+    "file": "/Users/markfqwu/leveldb/db/table_cache.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/version_edit.cc.o -c /Users/markfqwu/leveldb/db/version_edit.cc",
+    "file": "/Users/markfqwu/leveldb/db/version_edit.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/version_set.cc.o -c /Users/markfqwu/leveldb/db/version_set.cc",
+    "file": "/Users/markfqwu/leveldb/db/version_set.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/db/write_batch.cc.o -c /Users/markfqwu/leveldb/db/write_batch.cc",
+    "file": "/Users/markfqwu/leveldb/db/write_batch.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/block_builder.cc.o -c /Users/markfqwu/leveldb/table/block_builder.cc",
+    "file": "/Users/markfqwu/leveldb/table/block_builder.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/block.cc.o -c /Users/markfqwu/leveldb/table/block.cc",
+    "file": "/Users/markfqwu/leveldb/table/block.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/filter_block.cc.o -c /Users/markfqwu/leveldb/table/filter_block.cc",
+    "file": "/Users/markfqwu/leveldb/table/filter_block.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/format.cc.o -c /Users/markfqwu/leveldb/table/format.cc",
+    "file": "/Users/markfqwu/leveldb/table/format.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/iterator.cc.o -c /Users/markfqwu/leveldb/table/iterator.cc",
+    "file": "/Users/markfqwu/leveldb/table/iterator.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/merger.cc.o -c /Users/markfqwu/leveldb/table/merger.cc",
+    "file": "/Users/markfqwu/leveldb/table/merger.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/table_builder.cc.o -c /Users/markfqwu/leveldb/table/table_builder.cc",
+    "file": "/Users/markfqwu/leveldb/table/table_builder.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/table.cc.o -c /Users/markfqwu/leveldb/table/table.cc",
+    "file": "/Users/markfqwu/leveldb/table/table.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/table/two_level_iterator.cc.o -c /Users/markfqwu/leveldb/table/two_level_iterator.cc",
+    "file": "/Users/markfqwu/leveldb/table/two_level_iterator.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/arena.cc.o -c /Users/markfqwu/leveldb/util/arena.cc",
+    "file": "/Users/markfqwu/leveldb/util/arena.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/bloom.cc.o -c /Users/markfqwu/leveldb/util/bloom.cc",
+    "file": "/Users/markfqwu/leveldb/util/bloom.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/cache.cc.o -c /Users/markfqwu/leveldb/util/cache.cc",
+    "file": "/Users/markfqwu/leveldb/util/cache.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/coding.cc.o -c /Users/markfqwu/leveldb/util/coding.cc",
+    "file": "/Users/markfqwu/leveldb/util/coding.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/comparator.cc.o -c /Users/markfqwu/leveldb/util/comparator.cc",
+    "file": "/Users/markfqwu/leveldb/util/comparator.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/crc32c.cc.o -c /Users/markfqwu/leveldb/util/crc32c.cc",
+    "file": "/Users/markfqwu/leveldb/util/crc32c.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/env.cc.o -c /Users/markfqwu/leveldb/util/env.cc",
+    "file": "/Users/markfqwu/leveldb/util/env.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/filter_policy.cc.o -c /Users/markfqwu/leveldb/util/filter_policy.cc",
+    "file": "/Users/markfqwu/leveldb/util/filter_policy.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/hash.cc.o -c /Users/markfqwu/leveldb/util/hash.cc",
+    "file": "/Users/markfqwu/leveldb/util/hash.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/logging.cc.o -c /Users/markfqwu/leveldb/util/logging.cc",
+    "file": "/Users/markfqwu/leveldb/util/logging.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/options.cc.o -c /Users/markfqwu/leveldb/util/options.cc",
+    "file": "/Users/markfqwu/leveldb/util/options.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/status.cc.o -c /Users/markfqwu/leveldb/util/status.cc",
+    "file": "/Users/markfqwu/leveldb/util/status.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/util/env_posix.cc.o -c /Users/markfqwu/leveldb/util/env_posix.cc",
+    "file": "/Users/markfqwu/leveldb/util/env_posix.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_COMPILE_LIBRARY -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldb.dir/helpers/memenv/memenv.cc.o -c /Users/markfqwu/leveldb/helpers/memenv/memenv.cc",
+    "file": "/Users/markfqwu/leveldb/helpers/memenv/memenv.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_bench.dir/util/histogram.cc.o -c /Users/markfqwu/leveldb/util/histogram.cc",
+    "file": "/Users/markfqwu/leveldb/util/histogram.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_bench.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_bench.dir/benchmarks/db_bench.cc.o -c /Users/markfqwu/leveldb/benchmarks/db_bench.cc",
+    "file": "/Users/markfqwu/leveldb/benchmarks/db_bench.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/env_posix_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o -c /Users/markfqwu/leveldb/util/env_posix_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/env_posix_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/hash_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/hash_test.dir/util/hash_test.cc.o -c /Users/markfqwu/leveldb/util/hash_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/hash_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_bench_sqlite3.dir/util/histogram.cc.o -c /Users/markfqwu/leveldb/util/histogram.cc",
+    "file": "/Users/markfqwu/leveldb/util/histogram.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_bench_sqlite3.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_bench_sqlite3.dir/benchmarks/db_bench_sqlite3.cc.o -c /Users/markfqwu/leveldb/benchmarks/db_bench_sqlite3.cc",
+    "file": "/Users/markfqwu/leveldb/benchmarks/db_bench_sqlite3.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/cache_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/cache_test.dir/util/cache_test.cc.o -c /Users/markfqwu/leveldb/util/cache_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/cache_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/bloom_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/bloom_test.dir/util/bloom_test.cc.o -c /Users/markfqwu/leveldb/util/bloom_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/bloom_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/arena_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/arena_test.dir/util/arena_test.cc.o -c /Users/markfqwu/leveldb/util/arena_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/arena_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/logging_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/logging_test.dir/util/logging_test.cc.o -c /Users/markfqwu/leveldb/util/logging_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/logging_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/table_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/table_test.dir/table/table_test.cc.o -c /Users/markfqwu/leveldb/table/table_test.cc",
+    "file": "/Users/markfqwu/leveldb/table/table_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/memenv_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/memenv_test.dir/helpers/memenv/memenv_test.cc.o -c /Users/markfqwu/leveldb/helpers/memenv/memenv_test.cc",
+    "file": "/Users/markfqwu/leveldb/helpers/memenv/memenv_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/write_batch_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/write_batch_test.dir/db/write_batch_test.cc.o -c /Users/markfqwu/leveldb/db/write_batch_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/write_batch_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/skiplist_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/skiplist_test.dir/db/skiplist_test.cc.o -c /Users/markfqwu/leveldb/db/skiplist_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/skiplist_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/issue200_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/issue200_test.dir/issues/issue200_test.cc.o -c /Users/markfqwu/leveldb/issues/issue200_test.cc",
+    "file": "/Users/markfqwu/leveldb/issues/issue200_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/filename_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/filename_test.dir/db/filename_test.cc.o -c /Users/markfqwu/leveldb/db/filename_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/filename_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/recovery_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/recovery_test.dir/db/recovery_test.cc.o -c /Users/markfqwu/leveldb/db/recovery_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/recovery_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/version_edit_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/version_edit_test.dir/db/version_edit_test.cc.o -c /Users/markfqwu/leveldb/db/version_edit_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/version_edit_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/log_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/log_test.dir/db/log_test.cc.o -c /Users/markfqwu/leveldb/db/log_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/log_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/dbformat_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/dbformat_test.dir/db/dbformat_test.cc.o -c /Users/markfqwu/leveldb/db/dbformat_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/dbformat_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/issue178_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/issue178_test.dir/issues/issue178_test.cc.o -c /Users/markfqwu/leveldb/issues/issue178_test.cc",
+    "file": "/Users/markfqwu/leveldb/issues/issue178_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/env_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/env_test.dir/util/env_test.cc.o -c /Users/markfqwu/leveldb/util/env_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/env_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/db_test.dir/db/db_test.cc.o -c /Users/markfqwu/leveldb/db/db_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/db_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/corruption_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/corruption_test.dir/db/corruption_test.cc.o -c /Users/markfqwu/leveldb/db/corruption_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/corruption_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/coding_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/coding_test.dir/util/coding_test.cc.o -c /Users/markfqwu/leveldb/util/coding_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/coding_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/no_destructor_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/no_destructor_test.dir/util/no_destructor_test.cc.o -c /Users/markfqwu/leveldb/util/no_destructor_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/no_destructor_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/autocompact_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/autocompact_test.dir/db/autocompact_test.cc.o -c /Users/markfqwu/leveldb/db/autocompact_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/autocompact_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/filter_block_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/filter_block_test.dir/table/filter_block_test.cc.o -c /Users/markfqwu/leveldb/table/filter_block_test.cc",
+    "file": "/Users/markfqwu/leveldb/table/filter_block_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/version_set_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/version_set_test.dir/db/version_set_test.cc.o -c /Users/markfqwu/leveldb/db/version_set_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/version_set_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/issue320_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/issue320_test.dir/issues/issue320_test.cc.o -c /Users/markfqwu/leveldb/issues/issue320_test.cc",
+    "file": "/Users/markfqwu/leveldb/issues/issue320_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/status_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/status_test.dir/util/status_test.cc.o -c /Users/markfqwu/leveldb/util/status_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/status_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/fault_injection_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/fault_injection_test.dir/db/fault_injection_test.cc.o -c /Users/markfqwu/leveldb/db/fault_injection_test.cc",
+    "file": "/Users/markfqwu/leveldb/db/fault_injection_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/c_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -Wstrict-prototypes -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c11 -o CMakeFiles/c_test.dir/db/c_test.c.o -c /Users/markfqwu/leveldb/db/c_test.c",
+    "file": "/Users/markfqwu/leveldb/db/c_test.c"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/crc32c_test.dir/util/testutil.cc.o -c /Users/markfqwu/leveldb/util/testutil.cc",
+    "file": "/Users/markfqwu/leveldb/util/testutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DLEVELDB_PLATFORM_POSIX=1 -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/crc32c_test.dir/util/crc32c_test.cc.o -c /Users/markfqwu/leveldb/util/crc32c_test.cc",
+    "file": "/Users/markfqwu/leveldb/util/crc32c_test.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/include  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Werror -Wthread-safety -std=c++11 -o CMakeFiles/leveldbutil.dir/db/leveldbutil.cc.o -c /Users/markfqwu/leveldb/db/leveldbutil.cc",
+    "file": "/Users/markfqwu/leveldb/db/leveldbutil.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/googletest/googlemock",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/googletest/googlemock/include -I/Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -Wno-missing-field-initializers -std=c++11 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/markfqwu/leveldb/third_party/googletest/googlemock/src/gmock-all.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/googletest/googlemock/src/gmock-all.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/googletest/googlemock",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googlemock -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++11 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/markfqwu/leveldb/third_party/googletest/googlemock/src/gmock_main.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/googletest/googlemock/src/gmock_main.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/googletest/googletest",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/googletest/googletest/include -I/Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -Wno-missing-field-initializers -std=c++11 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/markfqwu/leveldb/third_party/googletest/googletest/src/gtest-all.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/googletest/googletest/src/gtest-all.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/googletest/googletest",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest/include -isystem /Users/markfqwu/leveldb/third_party/googletest/googletest  -fno-exceptions -fno-rtti -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++11 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/markfqwu/leveldb/third_party/googletest/googletest/src/gtest_main.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/googletest/googletest/src/gtest_main.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/benchmark.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/benchmark.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/benchmark.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/benchmark_api_internal.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_api_internal.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_api_internal.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/benchmark_name.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_name.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_name.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/benchmark_register.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_register.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_register.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/benchmark_runner.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_runner.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_runner.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/colorprint.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/colorprint.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/colorprint.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/commandlineflags.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/commandlineflags.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/commandlineflags.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/complexity.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/complexity.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/complexity.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/console_reporter.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/console_reporter.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/console_reporter.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/counter.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/counter.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/counter.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/csv_reporter.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/csv_reporter.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/csv_reporter.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/json_reporter.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/json_reporter.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/json_reporter.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/perf_counters.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/perf_counters.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/perf_counters.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/reporter.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/reporter.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/reporter.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/sleep.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/sleep.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/sleep.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/statistics.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/statistics.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/statistics.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/string_util.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/string_util.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/string_util.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/sysinfo.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/sysinfo.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/sysinfo.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark.dir/timers.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/timers.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/timers.cc"
+  },
+  {
+    "directory": "/Users/markfqwu/leveldb/build/Debug/third_party/benchmark/src",
+    "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_POSIX_REGEX -DHAVE_STD_REGEX -DHAVE_STEADY_CLOCK -I/Users/markfqwu/leveldb/build/Debug/include -I/Users/markfqwu/leveldb/. -I/Users/markfqwu/leveldb/third_party/benchmark/include -I/Users/markfqwu/leveldb/third_party/benchmark/src -I/Users/markfqwu/leveldb/third_party/benchmark/src/../include  -fno-exceptions -fno-rtti  -std=c++11  -Wall  -Wextra  -Wshadow  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -O3 -DNDEBUG  -Werror  -Wno-deprecated -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=c++11 -o CMakeFiles/benchmark_main.dir/benchmark_main.cc.o -c /Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_main.cc",
+    "file": "/Users/markfqwu/leveldb/third_party/benchmark/src/benchmark_main.cc"
+  }
+]
