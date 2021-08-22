@@ -7,18 +7,21 @@
 
 // Thread safety
 // -------------
-//
+// 写需要外部同步；读需要保证skiplist不被销毁，但没有任何的内部锁和同步操作
 // Writes require external synchronization, most likely a mutex.
 // Reads require a guarantee that the SkipList will not be destroyed
 // while the read is in progress.  Apart from that, reads progress
 // without any internal locking or synchronization.
 //
+
 // Invariants:
-//
+// 已分配的节点不会被删除，直到SkipList被销毁。
 // (1) Allocated nodes are never deleted until the SkipList is
 // destroyed.  This is trivially guaranteed by the code since we
 // never delete any skip list nodes.
-//
+
+// 节点加入skiplist后内容不会被改变，除了prev/next指针;
+// 只有insert会改变list并且使用release-store（内存序）来publish节点到多个list
 // (2) The contents of a Node except for the next/prev pointers are
 // immutable after the Node has been linked into the SkipList.
 // Only Insert() modifies the list, and it is careful to initialize
@@ -54,6 +57,7 @@ class SkipList {
 
   // Insert key into the list.
   // REQUIRES: nothing that compares equal to key is currently in the list.
+  // 列表中当前不能有与 key 相等的值
   void Insert(const Key& key);
 
   // Returns true iff an entry that compares equal to key is in the list.
@@ -101,9 +105,7 @@ class SkipList {
  private:
   enum { kMaxHeight = 12 };
 
-  inline int GetMaxHeight() const {
-    return max_height_.load(std::memory_order_relaxed);
-  }
+  inline int GetMaxHeight() const { return max_height_.load(std::memory_order_relaxed); }
 
   Node* NewNode(const Key& key, int height);
   int RandomHeight();
@@ -113,18 +115,23 @@ class SkipList {
   bool KeyIsAfterNode(const Key& key, Node* n) const;
 
   // Return the earliest node that comes at or after key.
+  // 返回出现在 key 处或之后的最早节点
   // Return nullptr if there is no such node.
   //
   // If prev is non-null, fills prev[level] with pointer to previous
   // node at "level" for every level in [0..max_height_-1].
+  // 如果prev非空，对于[0..max_hekight-1]中所有level，使用指向level前一个节点的指针填充prev[level], 用于插入。
+  // 实际上是为了找到key的插入位置
   Node* FindGreaterOrEqual(const Key& key, Node** prev) const;
 
   // Return the latest node with a key < key.
   // Return head_ if there is no such node.
+  // 返回小于key的最后一个节点
   Node* FindLessThan(const Key& key) const;
 
   // Return the last node in the list.
   // Return head_ if list is empty.
+  // 返回最后一个节点
   Node* FindLast() const;
 
   // Immutable after construction
@@ -141,6 +148,8 @@ class SkipList {
   Random rnd_;
 };
 
+// 虽然是模板，但是声明和实现还是分离的，即使在同一个文件，可借鉴。
+// 模板中前置声明的类型，也是模板
 // Implementation details follow
 template <typename Key, class Comparator>
 struct SkipList<Key, Comparator>::Node {
@@ -154,13 +163,15 @@ struct SkipList<Key, Comparator>::Node {
     assert(n >= 0);
     // Use an 'acquire load' so that we observe a fully initialized
     // version of the returned Node.
-    return next_[n].load(std::memory_order_acquire);
+    // 使用读不前模式，使得我们看到的返回节点是完全初始化好的
+    return next_[n].load(std::memory_order_acquire);  // "读不前"
   }
   void SetNext(int n, Node* x) {
     assert(n >= 0);
     // Use a 'release store' so that anybody who reads through this
     // pointer observes a fully initialized version of the inserted node.
-    next_[n].store(x, std::memory_order_release);
+    // 使用写不后模式，使得任何人通过这个指针读取到的被插入节点都是完全初始化好的
+    next_[n].store(x, std::memory_order_release);  // "写不后"
   }
 
   // No-barrier variants that can be safely used in a few locations.
@@ -179,10 +190,8 @@ struct SkipList<Key, Comparator>::Node {
 };
 
 template <typename Key, class Comparator>
-typename SkipList<Key, Comparator>::Node* SkipList<Key, Comparator>::NewNode(
-    const Key& key, int height) {
-  char* const node_memory = arena_->AllocateAligned(
-      sizeof(Node) + sizeof(std::atomic<Node*>) * (height - 1));
+typename SkipList<Key, Comparator>::Node* SkipList<Key, Comparator>::NewNode(const Key& key, int height) {
+  char* const node_memory = arena_->AllocateAligned(sizeof(Node) + sizeof(std::atomic<Node*>) * (height - 1));
   return new (node_memory) Node(key);
 }
 
@@ -243,6 +252,16 @@ int SkipList<Key, Comparator>::RandomHeight() {
   // Increase height with probability 1 in kBranching
   static const unsigned int kBranching = 4;
   int height = 1;
+  // 表示平均每4个元素选一个元素建立上层索引：
+  // 3/4 的概率返回1, 表示不建立索引
+  // 3/16 的概率返回2，表示建立一级索引
+  // 3/64 的概率返回3，表示建立二级索引（包含一级索引）
+  // 3/256 的概率返回4，表示建立三级索引（包含一级和二级索引）
+  // ...
+  // 因此，建立一级索引的概率为，返回值>1, 即 1-3/4 = 1/4
+  // 建立二级索引的概率为，返回值>2, 即 1- 3/4 - 3/16 = 1/16
+  // 建立三级索引的概率为，返回值>3，即 1 - 3/4 - 3/16 - 3/64 = 1/64
+  // ...
   while (height < kMaxHeight && ((rnd_.Next() % kBranching) == 0)) {
     height++;
   }
@@ -257,18 +276,20 @@ bool SkipList<Key, Comparator>::KeyIsAfterNode(const Key& key, Node* n) const {
   return (n != nullptr) && (compare_(n->key, key) < 0);
 }
 
+// 如果prev不为空，则在遍历过程中保存所有level中的prev节点，用于插入。注意：每一层的prev节点可能都不一样
 template <typename Key, class Comparator>
-typename SkipList<Key, Comparator>::Node*
-SkipList<Key, Comparator>::FindGreaterOrEqual(const Key& key,
-                                              Node** prev) const {
+typename SkipList<Key, Comparator>::Node* SkipList<Key, Comparator>::FindGreaterOrEqual(const Key& key,
+                                                                                        Node** prev) const {
   Node* x = head_;
+  // 从最上层索引开始找
   int level = GetMaxHeight() - 1;
   while (true) {
     Node* next = x->Next(level);
+    // 如果key还在next的后面，则在这层继续找（next != nullptr && next->key < key）
     if (KeyIsAfterNode(key, next)) {
       // Keep searching in this list
       x = next;
-    } else {
+    } else {  // 如果next为nullptr，或者 next->key >= key (KeyIsAfterNode的反义)
       if (prev != nullptr) prev[level] = x;
       if (level == 0) {
         return next;
@@ -281,29 +302,29 @@ SkipList<Key, Comparator>::FindGreaterOrEqual(const Key& key,
 }
 
 template <typename Key, class Comparator>
-typename SkipList<Key, Comparator>::Node*
-SkipList<Key, Comparator>::FindLessThan(const Key& key) const {
+typename SkipList<Key, Comparator>::Node* SkipList<Key, Comparator>::FindLessThan(const Key& key) const {
   Node* x = head_;
+  // 从最上层索引开始找
   int level = GetMaxHeight() - 1;
   while (true) {
     assert(x == head_ || compare_(x->key, key) < 0);
     Node* next = x->Next(level);
+    // 后面没有节点了或者下一个节点不比key小
     if (next == nullptr || compare_(next->key, key) >= 0) {
-      if (level == 0) {
+      if (level == 0) {  // 当前是最底层，直接返回
         return x;
-      } else {
-        // Switch to next list
+      } else {  // 否则到下一层搜索
+        // Switch to next list，
         level--;
       }
-    } else {
+    } else {  // next非空且其key比搜索的key小，才能在当前层继续搜索
       x = next;
     }
   }
 }
 
 template <typename Key, class Comparator>
-typename SkipList<Key, Comparator>::Node* SkipList<Key, Comparator>::FindLast()
-    const {
+typename SkipList<Key, Comparator>::Node* SkipList<Key, Comparator>::FindLast() const {
   Node* x = head_;
   int level = GetMaxHeight() - 1;
   while (true) {
@@ -337,14 +358,18 @@ template <typename Key, class Comparator>
 void SkipList<Key, Comparator>::Insert(const Key& key) {
   // TODO(opt): We can use a barrier-free variant of FindGreaterOrEqual()
   // here since Insert() is externally synchronized.
+  // 1. 找到插入位置和每一层的前驱节点
   Node* prev[kMaxHeight];
   Node* x = FindGreaterOrEqual(key, prev);
 
   // Our data structure does not allow duplicate insertion
+  // 不允许重复key出现
   assert(x == nullptr || !Equal(key, x->key));
 
+  // 2. 选择一个随机高度
   int height = RandomHeight();
   if (height > GetMaxHeight()) {
+    // 如果height 大于当前list的max_height_, 设置超出层的prev节点为head_
     for (int i = GetMaxHeight(); i < height; i++) {
       prev[i] = head_;
     }
@@ -355,10 +380,14 @@ void SkipList<Key, Comparator>::Insert(const Key& key) {
     // the loop below.  In the former case the reader will
     // immediately drop to the next level since nullptr sorts after all
     // keys.  In the latter case the reader will use the new node.
+    // 这里没有同步是ok的，一个观察到max_height_新值的并发读者，或者从head_看到新level指针的旧值(nullptr),
+    // 或者是用下面的loop设置的新值。在前一种情况，读者会立即跳到下一层，因为nullptr在所有key的后面。在后一种
+    // 情况读者会使用新的节点，此时节点已经插入list，且下面的层都已就绪（下面的loop是从底层开始往上设置）。
     max_height_.store(height, std::memory_order_relaxed);
   }
 
   x = NewNode(key, height);
+  // 设置前驱和后继节点
   for (int i = 0; i < height; i++) {
     // NoBarrier_SetNext() suffices since we will add a barrier when
     // we publish a pointer to "x" in prev[i].

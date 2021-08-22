@@ -18,10 +18,11 @@ void PutFixed64(std::string* dst, uint64_t value) {
   dst->append(buf, sizeof(buf));
 }
 
+// 32、64变长编码，7位一组，用第一位表示后面是否还有字节
 char* EncodeVarint32(char* dst, uint32_t v) {
   // Operate on characters as unsigneds
   uint8_t* ptr = reinterpret_cast<uint8_t*>(dst);
-  static const int B = 128;
+  static const int B = 128; // 128 二进制 1000 0000
   if (v < (1 << 7)) {
     *(ptr++) = v;
   } else if (v < (1 << 14)) {
@@ -86,12 +87,13 @@ int VarintLength(uint64_t v) {
 const char* GetVarint32PtrFallback(const char* p, const char* limit,
                                    uint32_t* value) {
   uint32_t result = 0;
+  // 32位的变长编码最多占用5个字节，因此此处shift表示最多遍历5次
   for (uint32_t shift = 0; shift <= 28 && p < limit; shift += 7) {
     uint32_t byte = *(reinterpret_cast<const uint8_t*>(p));
     p++;
-    if (byte & 128) {
+    if (byte & 128) { // 最高位为1，表示后面还有字节需要解析
       // More bytes are present
-      result |= ((byte & 127) << shift);
+      result |= ((byte & 127) << shift); // 127 二进制 0111 1111
     } else {
       result |= (byte << shift);
       *value = result;
@@ -115,6 +117,7 @@ bool GetVarint32(Slice* input, uint32_t* value) {
 
 const char* GetVarint64Ptr(const char* p, const char* limit, uint64_t* value) {
   uint64_t result = 0;
+  // 64位变长编码最多占用10个字节，shift表示最多遍历10次
   for (uint32_t shift = 0; shift <= 63 && p < limit; shift += 7) {
     uint64_t byte = *(reinterpret_cast<const uint8_t*>(p));
     p++;

@@ -46,15 +46,19 @@ class Random {
   }
   // Returns a uniformly distributed value in the range [0..n-1]
   // REQUIRES: n > 0
+  // 返回[0..n-1之间的均匀分布值
   uint32_t Uniform(int n) { return Next() % n; }
 
   // Randomly returns true ~"1/n" of the time, and false otherwise.
   // REQUIRES: n > 0
+  // 以1/n概率返回true
   bool OneIn(int n) { return (Next() % n) == 0; }
 
   // Skewed: pick "base" uniformly from range [0,max_log] and then
   // return "base" random bits.  The effect is to pick a number in the
   // range [0,2^max_log-1] with exponential bias towards smaller numbers.
+  // 倾斜：从范围 [0,max_log] 中均匀选择“base”，然后返回“base”位随机值。 
+  // 效果是在 [0,2^max_log-1] 范围内选择一个数字，对较小的数字有指数偏差(像小数字倾斜)
   uint32_t Skewed(int max_log) { return Uniform(1 << Uniform(max_log + 1)); }
 };
 

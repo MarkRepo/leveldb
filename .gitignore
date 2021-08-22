@@ -2,6 +2,7 @@
 *.sw*
 .vscode
 .DS_Store
+.ccls-cache/
 
 # Build directory.
 build/

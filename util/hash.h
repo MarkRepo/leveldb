@@ -12,6 +12,7 @@
 
 namespace leveldb {
 
+// 类似md5计算[data, data+n)的摘要，得到hash值
 uint32_t Hash(const char* data, size_t n, uint32_t seed);
 
 }  // namespace leveldb

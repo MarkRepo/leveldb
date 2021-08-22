@@ -8,8 +8,7 @@ namespace leveldb {
 
 static const int kBlockSize = 4096;
 
-Arena::Arena()
-    : alloc_ptr_(nullptr), alloc_bytes_remaining_(0), memory_usage_(0) {}
+Arena::Arena() : alloc_ptr_(nullptr), alloc_bytes_remaining_(0), memory_usage_(0) {}
 
 Arena::~Arena() {
   for (size_t i = 0; i < blocks_.size(); i++) {
@@ -35,12 +34,12 @@ char* Arena::AllocateFallback(size_t bytes) {
   return result;
 }
 
+// 分配边界对齐的内存，按照系统指针长度来对齐，至少为8
 char* Arena::AllocateAligned(size_t bytes) {
   const int align = (sizeof(void*) > 8) ? sizeof(void*) : 8;
-  static_assert((align & (align - 1)) == 0,
-                "Pointer size should be a power of 2");
-  size_t current_mod = reinterpret_cast<uintptr_t>(alloc_ptr_) & (align - 1);
-  size_t slop = (current_mod == 0 ? 0 : align - current_mod);
+  static_assert((align & (align - 1)) == 0, "Pointer size should be a power of 2");
+  size_t current_mod = reinterpret_cast<uintptr_t>(alloc_ptr_) & (align - 1);  // 当前指针相隔上一个对齐边界有多少字节
+  size_t slop = (current_mod == 0 ? 0 : align - current_mod);  // 到下一个对齐边界需要浪费的字节
   size_t needed = bytes + slop;
   char* result;
   if (needed <= alloc_bytes_remaining_) {
@@ -58,8 +57,7 @@ char* Arena::AllocateAligned(size_t bytes) {
 char* Arena::AllocateNewBlock(size_t block_bytes) {
   char* result = new char[block_bytes];
   blocks_.push_back(result);
-  memory_usage_.fetch_add(block_bytes + sizeof(char*),
-                          std::memory_order_relaxed);
+  memory_usage_.fetch_add(block_bytes + sizeof(char*), std::memory_order_relaxed);
   return result;
 }
 

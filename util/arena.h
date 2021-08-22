@@ -13,6 +13,7 @@
 
 namespace leveldb {
 
+// leveldb 内存池实现
 class Arena {
  public:
   Arena();
@@ -23,9 +24,11 @@ class Arena {
   ~Arena();
 
   // Return a pointer to a newly allocated memory block of "bytes" bytes.
+  // 分配bytes字节内存，如果剩余字节能够满足，则返回已有内存并调整状态，否则调用AllocatFallback分配
   char* Allocate(size_t bytes);
 
   // Allocate memory with the normal alignment guarantees provided by malloc.
+  // 分配边界对齐的内存，按照系统指针长度来对齐，至少为8
   char* AllocateAligned(size_t bytes);
 
   // Returns an estimate of the total memory usage of data allocated
@@ -35,10 +38,13 @@ class Arena {
   }
 
  private:
+  // 在当前块不够时调用，如果bytes大于1k，则新分配一个bytes大小的块；
+  // 如果bytes小于1k，则浪费当前块剩余内存(< 1k)，新分配一块4k的内存，从中分配给这次请求。
   char* AllocateFallback(size_t bytes);
+  // 分配一块block_bytes大小的内存块
   char* AllocateNewBlock(size_t block_bytes);
 
-  // Allocation state
+  // Allocation state 表示当前可以分配的内存地址和剩余字节
   char* alloc_ptr_;
   size_t alloc_bytes_remaining_;
 
@@ -49,7 +55,7 @@ class Arena {
   //
   // TODO(costan): This member is accessed via atomics, but the others are
   //               accessed without any locking. Is this OK?
-  std::atomic<size_t> memory_usage_;
+  std::atomic<size_t> memory_usage_; // 分配的所有内存大小
 };
 
 inline char* Arena::Allocate(size_t bytes) {
