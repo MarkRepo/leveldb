@@ -12,6 +12,7 @@
 
 namespace leveldb {
 
+// 打包序列号和类型，将类型放在低8位，序列号最大不超过56位，因此可以放入一个64位值
 static uint64_t PackSequenceAndType(uint64_t seq, ValueType t) {
   assert(seq <= kMaxSequenceNumber);
   assert(t <= kValueTypeForSeek);

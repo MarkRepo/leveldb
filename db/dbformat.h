@@ -14,6 +14,7 @@
 #include "leveldb/filter_policy.h"
 #include "leveldb/slice.h"
 #include "leveldb/table_builder.h"
+
 #include "util/coding.h"
 #include "util/logging.h"
 
@@ -21,6 +22,7 @@ namespace leveldb {
 
 // Grouping of constants.  We may want to make some of these
 // parameters set via options.
+// leveldb 参数
 namespace config {
 static const int kNumLevels = 7;
 
@@ -39,9 +41,13 @@ static const int kL0_StopWritesTrigger = 12;
 // expensive manifest file operations.  We do not push all the way to
 // the largest level since that can generate a lot of wasted disk
 // space if the same key space is being repeatedly overwritten.
+// 如果新 compacted memtable 不创建重叠，它被推送到的最大级别。
+// 我们尝试推送到级别 2 以避免相对昂贵的 level 0=>1 压缩并避免一些昂贵的manifest文件操作。
+// 我们不会一直推到最大level，因为如果重复覆盖相同的key空间，这会产生大量浪费的磁盘空间。
 static const int kMaxMemCompactLevel = 2;
 
 // Approximate gap in bytes between samples of data read during iteration.
+// 迭代期间读取的数据样本之间的近似字节间隔。
 static const int kReadBytesPeriod = 1048576;
 
 }  // namespace config
@@ -58,6 +64,9 @@ enum ValueType { kTypeDeletion = 0x0, kTypeValue = 0x1 };
 // and the value type is embedded as the low 8 bits in the sequence
 // number in internal keys, we need to use the highest-numbered
 // ValueType, not the lowest).
+// kValueTypeForSeek 定义了在构造 ParsedInternalKey 对象以查找特定序列号时应传递的 ValueType
+//（因为我们按降序对序列号进行排序，并且值类型嵌入为内部键中序列号的低 8 位，我们需要使用编号最高的
+//ValueType，而不是最低编号）。
 static const ValueType kValueTypeForSeek = kTypeValue;
 
 typedef uint64_t SequenceNumber;
@@ -72,15 +81,12 @@ struct ParsedInternalKey {
   ValueType type;
 
   ParsedInternalKey() {}  // Intentionally left uninitialized (for speed)
-  ParsedInternalKey(const Slice& u, const SequenceNumber& seq, ValueType t)
-      : user_key(u), sequence(seq), type(t) {}
+  ParsedInternalKey(const Slice& u, const SequenceNumber& seq, ValueType t) : user_key(u), sequence(seq), type(t) {}
   std::string DebugString() const;
 };
 
 // Return the length of the encoding of "key".
-inline size_t InternalKeyEncodingLength(const ParsedInternalKey& key) {
-  return key.user_key.size() + 8;
-}
+inline size_t InternalKeyEncodingLength(const ParsedInternalKey& key) { return key.user_key.size() + 8; }
 
 // Append the serialization of "key" to *result.
 void AppendInternalKey(std::string* result, const ParsedInternalKey& key);
@@ -89,6 +95,7 @@ void AppendInternalKey(std::string* result, const ParsedInternalKey& key);
 // stores the parsed data in "*result", and returns true.
 //
 // On error, returns false, leaves "*result" in an undefined state.
+// 解析internalkey
 bool ParseInternalKey(const Slice& internal_key, ParsedInternalKey* result);
 
 // Returns the user key portion of an internal key.
@@ -107,8 +114,7 @@ class InternalKeyComparator : public Comparator {
   explicit InternalKeyComparator(const Comparator* c) : user_comparator_(c) {}
   const char* Name() const override;
   int Compare(const Slice& a, const Slice& b) const override;
-  void FindShortestSeparator(std::string* start,
-                             const Slice& limit) const override;
+  void FindShortestSeparator(std::string* start, const Slice& limit) const override;
   void FindShortSuccessor(std::string* key) const override;
 
   const Comparator* user_comparator() const { return user_comparator_; }
@@ -163,13 +169,11 @@ class InternalKey {
   std::string DebugString() const;
 };
 
-inline int InternalKeyComparator::Compare(const InternalKey& a,
-                                          const InternalKey& b) const {
+inline int InternalKeyComparator::Compare(const InternalKey& a, const InternalKey& b) const {
   return Compare(a.Encode(), b.Encode());
 }
 
-inline bool ParseInternalKey(const Slice& internal_key,
-                             ParsedInternalKey* result) {
+inline bool ParseInternalKey(const Slice& internal_key, ParsedInternalKey* result) {
   const size_t n = internal_key.size();
   if (n < 8) return false;
   uint64_t num = DecodeFixed64(internal_key.data() + n - 8);
