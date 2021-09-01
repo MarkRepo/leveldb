@@ -1,0 +1,12 @@
+@startuml relation
+title 常见的类关系，从强到弱 继承=实现>组合>聚合>关联>依赖
+baseclass <|-- subclass : extend
+iface <|.. object : implements
+class person {
+  +climate Climate
+}
+people *-- hands : Composition
+whole o-- part : Aggregation
+climate <-- person : association
+water <.. fish : depend
+@enduml

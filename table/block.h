@@ -15,6 +15,7 @@ namespace leveldb {
 struct BlockContents;
 class Comparator;
 
+// 关于 data block中有关restart point的信息参考 filter_block.h 的开头
 class Block {
  public:
   // Initialize the block with the specified contents.

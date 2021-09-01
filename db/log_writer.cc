@@ -7,6 +7,7 @@
 #include <cstdint>
 
 #include "leveldb/env.h"
+
 #include "util/coding.h"
 #include "util/crc32c.h"
 
@@ -20,12 +21,9 @@ static void InitTypeCrc(uint32_t* type_crc) {
   }
 }
 
-Writer::Writer(WritableFile* dest) : dest_(dest), block_offset_(0) {
-  InitTypeCrc(type_crc_);
-}
+Writer::Writer(WritableFile* dest) : dest_(dest), block_offset_(0) { InitTypeCrc(type_crc_); }
 
-Writer::Writer(WritableFile* dest, uint64_t dest_length)
-    : dest_(dest), block_offset_(dest_length % kBlockSize) {
+Writer::Writer(WritableFile* dest, uint64_t dest_length) : dest_(dest), block_offset_(dest_length % kBlockSize) {
   InitTypeCrc(type_crc_);
 }
 
@@ -35,9 +33,8 @@ Status Writer::AddRecord(const Slice& slice) {
   const char* ptr = slice.data();
   size_t left = slice.size();
 
-  // Fragment the record if necessary and emit it.  Note that if slice
-  // is empty, we still want to iterate once to emit a single
-  // zero-length record
+  // Fragment the record if necessary and emit it.
+  // Note that if slice is empty, we still want to iterate once to emit a single zero-length record
   Status s;
   bool begin = true;
   do {
@@ -79,8 +76,7 @@ Status Writer::AddRecord(const Slice& slice) {
   return s;
 }
 
-Status Writer::EmitPhysicalRecord(RecordType t, const char* ptr,
-                                  size_t length) {
+Status Writer::EmitPhysicalRecord(RecordType t, const char* ptr, size_t length) {
   assert(length <= 0xffff);  // Must fit in two bytes
   assert(block_offset_ + kHeaderSize + length <= kBlockSize);
 

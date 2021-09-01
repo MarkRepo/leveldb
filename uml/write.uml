@@ -1,0 +1,19 @@
+@startuml
+title leveldb write 逻辑
+start
+:Writer w进队列;
+while (!w.done && w != q.front())
+  :w.cv.wait();
+endwhile
+if (w.done) then (yes)
+  end
+endif
+:MakeRoomForWrite;
+:BuildBatchGroup;
+:log->addRecord;
+:intertinto(w, mem_);
+:versions_->SetLastSeq;
+:设置batchgroup中的writer状态并出队列;
+:q.front().cv->signal()激活下一个写;
+end
+@enduml

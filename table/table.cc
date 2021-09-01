@@ -9,6 +9,7 @@
 #include "leveldb/env.h"
 #include "leveldb/filter_policy.h"
 #include "leveldb/options.h"
+
 #include "table/block.h"
 #include "table/filter_block.h"
 #include "table/format.h"
@@ -35,8 +36,13 @@ struct Table::Rep {
   Block* index_block;
 };
 
-Status Table::Open(const Options& options, RandomAccessFile* file,
-                   uint64_t size, Table** table) {
+// 读取sstable，sstable的结构参考filter_block.h的开头处：
+// 过程：
+// 1. 读取footer
+// 2. 读取index_block
+// 3. 将file，index_block, meta_handle 等信息保存到rep, 创建table
+// 4. 读取meta，即filter数据
+Status Table::Open(const Options& options, RandomAccessFile* file, uint64_t size, Table** table) {
   *table = nullptr;
   if (size < Footer::kEncodedLength) {
     return Status::Corruption("file is too short to be an sstable");
@@ -44,8 +50,7 @@ Status Table::Open(const Options& options, RandomAccessFile* file,
 
   char footer_space[Footer::kEncodedLength];
   Slice footer_input;
-  Status s = file->Read(size - Footer::kEncodedLength, Footer::kEncodedLength,
-                        &footer_input, footer_space);
+  Status s = file->Read(size - Footer::kEncodedLength, Footer::kEncodedLength, &footer_input, footer_space);
   if (!s.ok()) return s;
 
   Footer footer;
@@ -61,8 +66,8 @@ Status Table::Open(const Options& options, RandomAccessFile* file,
   s = ReadBlock(file, opt, footer.index_handle(), &index_block_contents);
 
   if (s.ok()) {
-    // We've successfully read the footer and the index block: we're
-    // ready to serve requests.
+    // We've successfully read the footer and the index block: we're ready to serve requests.
+    // index block 存储了 data block的索引信息
     Block* index_block = new Block(index_block_contents);
     Rep* rep = new Table::Rep;
     rep->options = options;
@@ -79,6 +84,10 @@ Status Table::Open(const Options& options, RandomAccessFile* file,
   return s;
 }
 
+// meta index block 用来存储filter block在整个sstable中的索引信息。
+// meta index block 只存储一条记录：
+// 该记录的key为："filter."与过滤器名字组成的常量字符串
+// 该记录的value为：filter block在sstable中的索引信息序列化后的内容，索引信息包括：（1）在sstable中的偏移量（2）数据长度
 void Table::ReadMeta(const Footer& footer) {
   if (rep_->options.filter_policy == nullptr) {
     return;  // Do not need any metadata
@@ -108,6 +117,7 @@ void Table::ReadMeta(const Footer& footer) {
   delete meta;
 }
 
+// 读取 meta index block的value，即filter block 的 offset和size，它由一个BlockHandle 表示
 void Table::ReadFilter(const Slice& filter_handle_value) {
   Slice v = filter_handle_value;
   BlockHandle filter_handle;
@@ -117,6 +127,7 @@ void Table::ReadFilter(const Slice& filter_handle_value) {
 
   // We might want to unify with ReadBlock() if we start
   // requiring checksum verification in Table::Open.
+  // 如果我们开始要求在 Table::Open 中进行校验和验证，我们可能希望在 ReadBlock() 时统一要求校验。
   ReadOptions opt;
   if (rep_->options.paranoid_checks) {
     opt.verify_checksums = true;
@@ -133,9 +144,7 @@ void Table::ReadFilter(const Slice& filter_handle_value) {
 
 Table::~Table() { delete rep_; }
 
-static void DeleteBlock(void* arg, void* ignored) {
-  delete reinterpret_cast<Block*>(arg);
-}
+static void DeleteBlock(void* arg, void* ignored) { delete reinterpret_cast<Block*>(arg); }
 
 static void DeleteCachedBlock(const Slice& key, void* value) {
   Block* block = reinterpret_cast<Block*>(value);
@@ -150,8 +159,7 @@ static void ReleaseBlock(void* arg, void* h) {
 
 // Convert an index iterator value (i.e., an encoded BlockHandle)
 // into an iterator over the contents of the corresponding block.
-Iterator* Table::BlockReader(void* arg, const ReadOptions& options,
-                             const Slice& index_value) {
+Iterator* Table::BlockReader(void* arg, const ReadOptions& options, const Slice& index_value) {
   Table* table = reinterpret_cast<Table*>(arg);
   Cache* block_cache = table->rep_->options.block_cache;
   Block* block = nullptr;
@@ -178,8 +186,7 @@ Iterator* Table::BlockReader(void* arg, const ReadOptions& options,
         if (s.ok()) {
           block = new Block(contents);
           if (contents.cachable && options.fill_cache) {
-            cache_handle = block_cache->Insert(key, block, block->size(),
-                                               &DeleteCachedBlock);
+            cache_handle = block_cache->Insert(key, block, block->size(), &DeleteCachedBlock);
           }
         }
       }
@@ -206,14 +213,13 @@ Iterator* Table::BlockReader(void* arg, const ReadOptions& options,
 }
 
 Iterator* Table::NewIterator(const ReadOptions& options) const {
-  return NewTwoLevelIterator(
-      rep_->index_block->NewIterator(rep_->options.comparator),
-      &Table::BlockReader, const_cast<Table*>(this), options);
+  return NewTwoLevelIterator(rep_->index_block->NewIterator(rep_->options.comparator), &Table::BlockReader,
+                             const_cast<Table*>(this), options);
 }
 
+// 
 Status Table::InternalGet(const ReadOptions& options, const Slice& k, void* arg,
-                          void (*handle_result)(void*, const Slice&,
-                                                const Slice&)) {
+                          void (*handle_result)(void*, const Slice&, const Slice&)) {
   Status s;
   Iterator* iiter = rep_->index_block->NewIterator(rep_->options.comparator);
   iiter->Seek(k);
@@ -221,8 +227,7 @@ Status Table::InternalGet(const ReadOptions& options, const Slice& k, void* arg,
     Slice handle_value = iiter->value();
     FilterBlockReader* filter = rep_->filter;
     BlockHandle handle;
-    if (filter != nullptr && handle.DecodeFrom(&handle_value).ok() &&
-        !filter->KeyMayMatch(handle.offset(), k)) {
+    if (filter != nullptr && handle.DecodeFrom(&handle_value).ok() && !filter->KeyMayMatch(handle.offset(), k)) {
       // Not found
     } else {
       Iterator* block_iter = BlockReader(this, options, iiter->value());
@@ -242,8 +247,7 @@ Status Table::InternalGet(const ReadOptions& options, const Slice& k, void* arg,
 }
 
 uint64_t Table::ApproximateOffsetOf(const Slice& key) const {
-  Iterator* index_iter =
-      rep_->index_block->NewIterator(rep_->options.comparator);
+  Iterator* index_iter = rep_->index_block->NewIterator(rep_->options.comparator);
   index_iter->Seek(key);
   uint64_t result;
   if (index_iter->Valid()) {

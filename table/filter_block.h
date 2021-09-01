@@ -6,6 +6,46 @@
 // filters (e.g., bloom filters) for all data blocks in the table combined
 // into a single filter block.
 
+/*
+  sstable 结构：
+    Data block 1 一个block默认为4kb
+    ...
+    Data block n
+    Filter block
+    Meta Index block
+    index block
+    Footer
+
+除了Footer以外， block的格式为: Data + CompressionType + CRC
+  其中Data block的 Data部分的逻辑格式为：
+    entry 1
+    ...
+    entry n
+    restart pointer 1 每个存储完整key的偏移量
+    restart pointer 2
+    ...
+    restart pointer length 表示有多少个完整key
+
+  其中 entry 结构:
+    shared key length + unshared key length  + value length + unshared key content + value
+
+一个sstable只有一个filter block，其内存储了所有block的filter数据. 具体来说，
+filter_data_k 包含了所有 “起始位置” 处于 [base*k, base*(k+1)]范围内的block的key的集合的filter数据，
+按数据大小而非block切分主要是为了尽量均匀，以应对存在一些block的key很多，另一些block的key很少的情况
+
+  filter block 结构：
+    filter data 1
+    ...
+    filter data n
+
+    filter 1 offset (4 byte) 表示filter data 1 的偏移
+    ...
+    filter n offset
+
+    filter offset's offset (4 byte)
+    base lg (default 11) (1 byte)， 即 base 为 2kb
+  */
+
 #ifndef STORAGE_LEVELDB_TABLE_FILTER_BLOCK_H_
 #define STORAGE_LEVELDB_TABLE_FILTER_BLOCK_H_
 
@@ -15,6 +55,7 @@
 #include <vector>
 
 #include "leveldb/slice.h"
+
 #include "util/hash.h"
 
 namespace leveldb {

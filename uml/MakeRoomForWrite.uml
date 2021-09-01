@@ -1,0 +1,23 @@
+@startuml
+title MakeRoomForWrite(force)
+start
+:force=update_batch==nullptr;
+:allow_delay=!force;
+while (true)
+  if (bg_error_?) then (yes)
+    break
+  elseif (allow_delay && NumL0Files >= kL0_SlowdownWritesTrigger?) then (yes)
+    :sleep(1ms);
+    :allow_delay=false;
+  elseif (imm != nullptr?) then (yes)  
+    :bgwork_finish_signal.wait();
+  elseif (NumL0Files >= kL0_StopWritesTrigger?) then (yes)
+    :bgwork_finish_signal.wait();
+  else (no)
+    :switch_to_a_new_memtable_and_log;
+    :force=false;
+    :MaybeScheduleCompaction();
+  endif
+endwhile
+end
+@enduml

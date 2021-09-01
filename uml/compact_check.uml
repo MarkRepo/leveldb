@@ -1,0 +1,13 @@
+@startuml
+title MayBeCompact
+skinparam conditionStyle InsideDiamond
+start
+if (background_compaction_scheduled_) then (yes)
+elseif (shut_down_) then(yes)
+elseif (bg_error_) then(yes)
+elseif (imm_ == nullptr && manual_compact_==nullptr && !versions_.NeedsCompaction()) then(yes)
+else (background thread)
+  :env_->schedule(BGWork);
+endif
+stop
+@enduml

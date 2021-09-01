@@ -25,8 +25,7 @@ class WriteBatchInternal {
   // Return the sequence number for the start of this batch.
   static SequenceNumber Sequence(const WriteBatch* batch);
 
-  // Store the specified number as the sequence number for the start of
-  // this batch.
+  // Store the specified number as the sequence number for the start of this batch.
   static void SetSequence(WriteBatch* batch, SequenceNumber seq);
 
   static Slice Contents(const WriteBatch* batch) { return Slice(batch->rep_); }

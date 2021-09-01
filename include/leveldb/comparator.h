@@ -46,8 +46,7 @@ class LEVELDB_EXPORT Comparator {
   // Simple comparator implementations may return with *start unchanged,
   // i.e., an implementation of this method that does nothing is correct.
   // 找到一个最短分隔符，将[start, limit) 分割
-  virtual void FindShortestSeparator(std::string* start,
-                                     const Slice& limit) const = 0;
+  virtual void FindShortestSeparator(std::string* start, const Slice& limit) const = 0;
 
   // Changes *key to a short string >= *key.
   // Simple comparator implementations may return with *key unchanged,

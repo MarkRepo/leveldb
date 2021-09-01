@@ -4,19 +4,20 @@
 
 #include "leveldb/dumpfile.h"
 
-#include <cstdio>
-
 #include "db/dbformat.h"
 #include "db/filename.h"
 #include "db/log_reader.h"
 #include "db/version_edit.h"
 #include "db/write_batch_internal.h"
+#include <cstdio>
+
 #include "leveldb/env.h"
 #include "leveldb/iterator.h"
 #include "leveldb/options.h"
 #include "leveldb/status.h"
 #include "leveldb/table.h"
 #include "leveldb/write_batch.h"
+
 #include "util/logging.h"
 
 namespace leveldb {
@@ -51,8 +52,7 @@ class CorruptionReporter : public log::Reader::Reporter {
 };
 
 // Print contents of a log file. (*func)() is called on every record.
-Status PrintLogContents(Env* env, const std::string& fname,
-                        void (*func)(uint64_t, Slice, WritableFile*),
+Status PrintLogContents(Env* env, const std::string& fname, void (*func)(uint64_t, Slice, WritableFile*),
                         WritableFile* dst) {
   SequentialFile* file;
   Status s = env->NewSequentialFile(fname, &file);

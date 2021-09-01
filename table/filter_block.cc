@@ -5,6 +5,7 @@
 #include "table/filter_block.h"
 
 #include "leveldb/filter_policy.h"
+
 #include "util/coding.h"
 
 namespace leveldb {
@@ -15,8 +16,7 @@ namespace leveldb {
 static const size_t kFilterBaseLg = 11;
 static const size_t kFilterBase = 1 << kFilterBaseLg;
 
-FilterBlockBuilder::FilterBlockBuilder(const FilterPolicy* policy)
-    : policy_(policy) {}
+FilterBlockBuilder::FilterBlockBuilder(const FilterPolicy* policy) : policy_(policy) {}
 
 void FilterBlockBuilder::StartBlock(uint64_t block_offset) {
   uint64_t filter_index = (block_offset / kFilterBase);
@@ -74,8 +74,7 @@ void FilterBlockBuilder::GenerateFilter() {
   start_.clear();
 }
 
-FilterBlockReader::FilterBlockReader(const FilterPolicy* policy,
-                                     const Slice& contents)
+FilterBlockReader::FilterBlockReader(const FilterPolicy* policy, const Slice& contents)
     : policy_(policy), data_(nullptr), offset_(nullptr), num_(0), base_lg_(0) {
   size_t n = contents.size();
   if (n < 5) return;  // 1 byte for base_lg_ and 4 for start of offset array
@@ -84,7 +83,7 @@ FilterBlockReader::FilterBlockReader(const FilterPolicy* policy,
   if (last_word > n - 5) return;
   data_ = contents.data();
   offset_ = data_ + last_word;
-  num_ = (n - 5 - last_word) / 4;
+  num_ = (n - 5 - last_word) / 4; // 一个偏移占4个字节
 }
 
 bool FilterBlockReader::KeyMayMatch(uint64_t block_offset, const Slice& key) {

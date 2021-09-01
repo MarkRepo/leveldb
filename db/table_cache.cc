@@ -5,8 +5,10 @@
 #include "db/table_cache.h"
 
 #include "db/filename.h"
+
 #include "leveldb/env.h"
 #include "leveldb/table.h"
+
 #include "util/coding.h"
 
 namespace leveldb {
@@ -29,17 +31,14 @@ static void UnrefEntry(void* arg1, void* arg2) {
   cache->Release(h);
 }
 
-TableCache::TableCache(const std::string& dbname, const Options& options,
-                       int entries)
-    : env_(options.env),
-      dbname_(dbname),
-      options_(options),
-      cache_(NewLRUCache(entries)) {}
+TableCache::TableCache(const std::string& dbname, const Options& options, int entries)
+    : env_(options.env), dbname_(dbname), options_(options), cache_(NewLRUCache(entries)) {}
 
 TableCache::~TableCache() { delete cache_; }
 
-Status TableCache::FindTable(uint64_t file_number, uint64_t file_size,
-                             Cache::Handle** handle) {
+// 根据 file_number 从 cache_ 中查找 TableAndFile，如果没有，则从文件系统中读取并加载到Table结构，
+// 并将 TableAndFile 加入 cache_
+Status TableCache::FindTable(uint64_t file_number, uint64_t file_size, Cache::Handle** handle) {
   Status s;
   char buf[sizeof(file_number)];
   EncodeFixed64(buf, file_number);
@@ -75,8 +74,7 @@ Status TableCache::FindTable(uint64_t file_number, uint64_t file_size,
   return s;
 }
 
-Iterator* TableCache::NewIterator(const ReadOptions& options,
-                                  uint64_t file_number, uint64_t file_size,
+Iterator* TableCache::NewIterator(const ReadOptions& options, uint64_t file_number, uint64_t file_size,
                                   Table** tableptr) {
   if (tableptr != nullptr) {
     *tableptr = nullptr;
@@ -97,10 +95,8 @@ Iterator* TableCache::NewIterator(const ReadOptions& options,
   return result;
 }
 
-Status TableCache::Get(const ReadOptions& options, uint64_t file_number,
-                       uint64_t file_size, const Slice& k, void* arg,
-                       void (*handle_result)(void*, const Slice&,
-                                             const Slice&)) {
+Status TableCache::Get(const ReadOptions& options, uint64_t file_number, uint64_t file_size, const Slice& k, void* arg,
+                       void (*handle_result)(void*, const Slice&, const Slice&)) {
   Cache::Handle* handle = nullptr;
   Status s = FindTable(file_number, file_size, &handle);
   if (s.ok()) {

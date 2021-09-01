@@ -33,10 +33,9 @@ std::string NumberToString(uint64_t num);
 // Escapes any non-printable characters found in "value".
 std::string EscapeString(const Slice& value);
 
-// Parse a human-readable number from "*in" into *value.  On success,
-// advances "*in" past the consumed number and sets "*val" to the
-// numeric value.  Otherwise, returns false and leaves *in in an
-// unspecified state.
+// Parse a human-readable number from "*in" into *value.
+// On success, advances "*in" past the consumed number and sets "*val" to the numeric value.
+// Otherwise, returns false and leaves *in in an unspecified state.
 bool ConsumeDecimalNumber(Slice* in, uint64_t* val);
 
 }  // namespace leveldb

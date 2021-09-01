@@ -1,0 +1,171 @@
+@startuml leveldb
+class Table::Rep {
+  + RandomAccessFile* file
+  + uint64_t cache_id
+  + FilterBlockReader* filter
+  + char* filter_data
+  + BlockHandle metaindex_handle
+}
+
+class Table {
+  - Rep* rep_
+}
+
+Table *-- Table::Rep
+
+class TableAndFile {
+  + Table* table
+  + RandomAccessFile* file
+}
+
+TableAndFile *-- Table
+
+class TableCache {
+  - Cache* cache_
+}
+
+Cache -* TableCache
+TableCache o-- TableAndFile
+
+interface Cache {
+  + Handle* Insert(Key, Value, Charge, deleter)
+  + Handle* Lookup(Key)
+  + void Release(Handle)
+  + void* Value(Handle)
+  + void Erase(Key)
+}
+
+class LRUHandle {
+  void* value
+  void (*deleter)(Slice key, void* value)
+  LRUHandle* next_hash
+  LRUHandle* next
+  LRUHandle* prev
+  size_t Charge
+  size_t key_length
+  bool in_cache
+  uint32_t refs
+  uint32_t hash
+  char key_data[1]
+  + Slice key()
+}
+
+class HandleTable {
+  - uint32_t length_
+  - uing32_t elems_
+  - LRUHandle** list_;
+  - LRUHandle** FindPointer()
+  - void Resize()
+
+  + LRUHandle* Lookup(Key, hash)
+  + LRUHandle* Insert(LRUHandle*)
+  + LRUHandle* Remove(const Slice& key, uint32_t hash)
+}
+
+class LRUCache {
+  - size_t capacity_
+  - size_t usage_
+  - LRUHandle lru_
+  - LRUHandle in_use_
+  - HandleTable table_
+}
+
+LRUCache *-- LRUHandle
+LRUCache *-- HandleTable
+HandleTable o-- LRUHandle
+
+class SharedLRUCache implements Cache {
+  - LRUCache shared[kNumShards]
+}
+
+SharedLRUCache o-- LRUCache
+
+class Version {
+  - int refs_
+  - VersionSet* vset_
+  - Version* next_
+  - Version* prev_
+  - std::vector<FileMetaData*> files_
+  - FileMetaData* file_to_compact_
+  - int file_to_compact_level_
+  - double compaction_score_
+  - int compaction_level_
+}
+
+class VersionSet {
+  - TableCache* table_cache_
+  - uint64_t next_file_number_
+  - uint64_t manifest_file_number_
+  - uint64_t last_sequence_
+  - uint64_t log_number_
+  - int64_t  prev_log_number_
+  - WritableFile* descriptor_file_
+  - log::Writer* descriptor_log_
+  - Version dummy_versions_
+  - Version* current_
+  - std::string compact_pointer_[config::kNumLevels]
+}
+
+VersionSet o-- Version
+
+class DBImpl {
+  - VersionSet* versions_
+  - TableCache* table_cache_
+  - MemTable* mem_
+  - MemTable* imm_
+  - WritableFile* logfile_
+  - std::deque<Writer*> writers_
+  - SnapshotList snapshots_
+  - std::set<uint64_t> pending_ouputs_
+  - ManualCompaction* manual_compaction_
+  - CompactionStats stats_
+}
+
+TableCache -* DBImpl
+TableCache -* VersionSet
+
+DBImpl *-- VersionSet
+DBImpl::table_cache_ ..> VersionSet::table_cache_ : the same one
+
+DBImpl *- MemTable
+SnapshotList --* DBImpl
+
+class MemTable {
+  - Arena arena_
+  - SkipList<const char*, KeyCompator> table_
+  - int refs_
+}
+
+class Arena {
+  - char* alloc_ptr_
+  - size_t alloc_bytes_remaining_
+  - std::vector<char*> blocks_
+  - std::atomic<size_t> mem_usage_
+}
+
+class SkipList {
+  - Comparator cmp_
+  - Arena* arena_
+  - Node* head_
+  - std::atomic<int> max_height_
+  - Random rnd_
+}
+
+Arena <-- MemTable
+SkipList <-- MemTable
+
+class SnapshotList {
+ - SnapshotImpl head_;
+}
+
+class SnapshotImpl implements Snapshot {
+  - SnapshotImpl* prev_;
+  - SnapshotImpl* next_;
+  - SequenceNumber sequence_number_;
+}
+
+SnapshotList o- SnapshotImpl
+
+interface Snapshot {}
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+title level get logic
+start
+:选择snapshot，封装lookupkey;
+if (mem中找到?) then (yes)
+elseif (imm中找到?) then (yes)
+else (no)
+:查找current中的level0-7层重叠文件;
+endif
+if (在文件中找过?) then (yes)
+  :更新第一个文件的seek次数;
+  :MaybeScheduleCompaction;
+else (no) 
+endif  
+end
+@enduml

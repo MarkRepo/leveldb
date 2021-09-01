@@ -10,6 +10,7 @@
 #include "leveldb/env.h"
 #include "leveldb/filter_policy.h"
 #include "leveldb/options.h"
+
 #include "table/block_builder.h"
 #include "table/filter_block.h"
 #include "table/format.h"
@@ -28,9 +29,7 @@ struct TableBuilder::Rep {
         index_block(&index_block_options),
         num_entries(0),
         closed(false),
-        filter_block(opt.filter_policy == nullptr
-                         ? nullptr
-                         : new FilterBlockBuilder(opt.filter_policy)),
+        filter_block(opt.filter_policy == nullptr ? nullptr : new FilterBlockBuilder(opt.filter_policy)),
         pending_index_entry(false) {
     index_block_options.block_restart_interval = 1;
   }
@@ -62,8 +61,7 @@ struct TableBuilder::Rep {
   std::string compressed_output;
 };
 
-TableBuilder::TableBuilder(const Options& options, WritableFile* file)
-    : rep_(new Rep(options, file)) {
+TableBuilder::TableBuilder(const Options& options, WritableFile* file) : rep_(new Rep(options, file)) {
   if (rep_->filter_block != nullptr) {
     rep_->filter_block->StartBlock(0);
   }
@@ -128,7 +126,7 @@ void TableBuilder::Flush() {
   if (!ok()) return;
   if (r->data_block.empty()) return;
   assert(!r->pending_index_entry);
-  WriteBlock(&r->data_block, &r->pending_handle);
+  WriteBlock(&r->data_block, &r->pending_handle); // would update pending_handle
   if (ok()) {
     r->pending_index_entry = true;
     r->status = r->file->Flush();
@@ -161,8 +159,7 @@ void TableBuilder::WriteBlock(BlockBuilder* block, BlockHandle* handle) {
           compressed->size() < raw.size() - (raw.size() / 8u)) {
         block_contents = *compressed;
       } else {
-        // Snappy not supported, or compressed less than 12.5%, so just
-        // store uncompressed form
+        // Snappy not supported, or compressed less than 12.5%, so just store uncompressed form
         block_contents = raw;
         type = kNoCompression;
       }
@@ -174,8 +171,7 @@ void TableBuilder::WriteBlock(BlockBuilder* block, BlockHandle* handle) {
   block->Reset();
 }
 
-void TableBuilder::WriteRawBlock(const Slice& block_contents,
-                                 CompressionType type, BlockHandle* handle) {
+void TableBuilder::WriteRawBlock(const Slice& block_contents, CompressionType type, BlockHandle* handle) {
   Rep* r = rep_;
   handle->set_offset(r->offset);
   handle->set_size(block_contents.size());
@@ -205,8 +201,7 @@ Status TableBuilder::Finish() {
 
   // Write filter block
   if (ok() && r->filter_block != nullptr) {
-    WriteRawBlock(r->filter_block->Finish(), kNoCompression,
-                  &filter_block_handle);
+    WriteRawBlock(r->filter_block->Finish(), kNoCompression, &filter_block_handle);
   }
 
   // Write metaindex block
