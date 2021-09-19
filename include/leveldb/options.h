@@ -53,7 +53,7 @@ struct LEVELDB_EXPORT Options {
 
   // If true, the implementation will do aggressive checking of the
   // data it is processing and will stop early if it detects any
-  // errors.  This may have unforeseen ramifications: for example, a
+  // errors.  This may have unforeseen ramifications(不可预见的后果): for example, a
   // corruption of one DB entry may cause a large number of entries to
   // become unreadable or for the entire DB to become unopenable.
   bool paranoid_checks = false;

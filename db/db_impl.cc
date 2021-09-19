@@ -372,6 +372,7 @@ Status DBImpl::Recover(VersionEdit* edit, bool* save_manifest) {
   return Status::OK();
 }
 
+// 将每个logfile的内容读取到memtable，如果不能resue，则compact到level0
 Status DBImpl::RecoverLogFile(uint64_t log_number, bool last_log, bool* save_manifest, VersionEdit* edit,
                               SequenceNumber* max_sequence) {
   struct LogReporter : public log::Reader::Reporter {
@@ -454,6 +455,7 @@ Status DBImpl::RecoverLogFile(uint64_t log_number, bool last_log, bool* save_man
   delete file;
 
   // See if we should keep reusing the last log file.
+  // 这里可以reuse，因为mem是新的，且每个logfile的recover，最后都会被WriteLevel0Table,因此最后一个logfile的recover，文件里和mem中数据一致
   if (status.ok() && options_.reuse_logs && last_log && compactions == 0) {
     assert(logfile_ == nullptr);
     assert(log_ == nullptr);
@@ -474,6 +476,7 @@ Status DBImpl::RecoverLogFile(uint64_t log_number, bool last_log, bool* save_man
     }
   }
 
+  // 每个logfile的recover在mem看来都是独立的，因此，如果没有被reuse，就compact掉
   if (mem != nullptr) {
     // mem did not get reused; compact it.
     if (status.ok()) {
@@ -869,6 +872,7 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
   if (snapshots_.empty()) {
     compact->smallest_snapshot = versions_->LastSequence();
   } else {
+    // 当前还有snapshot在引用的key不能删除
     compact->smallest_snapshot = snapshots_.oldest()->sequence_number();
   }
 
@@ -882,6 +886,7 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
   ParsedInternalKey ikey;
   std::string current_user_key;
   bool has_current_user_key = false;
+  // last_sequence_for_key 该key的最后一个seq
   SequenceNumber last_sequence_for_key = kMaxSequenceNumber;
   while (input->Valid() && !shutting_down_.load(std::memory_order_acquire)) {
     // Prioritize immutable compaction work
@@ -912,14 +917,20 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
       current_user_key.clear();
       has_current_user_key = false;
       last_sequence_for_key = kMaxSequenceNumber;
-    } else {
+    } else {  // 去除重复更旧的userkey
       if (!has_current_user_key || user_comparator()->Compare(ikey.user_key, Slice(current_user_key)) != 0) {
         // First occurrence of this user key
+        // 该userkey 第一次出现，将last_sequence_for_key 设为最大值表示最新
         current_user_key.assign(ikey.user_key.data(), ikey.user_key.size());
         has_current_user_key = true;
         last_sequence_for_key = kMaxSequenceNumber;
       }
-
+      // 如果上一个key的seq小于compact的最小seq，说明这不是该userkey的第一条记录，它更旧，可以删除
+      // 问题：如果第一条记录大于compact->smallest,
+      // 第二条记录小于compact->smallest，且不是kTypeDeletion,为什么这里不能直接drop第二条？
+      // 换句话说为什么是上一条一定要小于等于，不是第二条之后小于等于就可以删掉了？
+      // 这里的原因是smallest_snapshot还要引用该第二条数据，因为第一条seq比smallest_snapshot大，它无法引用
+      // 即只有确保有一条数据能被smallest_snapshot引用到的情况下，更旧的数据才能直接drop。
       if (last_sequence_for_key <= compact->smallest_snapshot) {
         // Hidden by an newer entry for same user key
         drop = true;  // (A)
@@ -927,11 +938,17 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
                  compact->compaction->IsBaseLevelForKey(ikey.user_key)) {
         // For this user key:
         // (1) there is no data in higher levels
-        // (2) data in lower levels will have larger sequence numbers
+        // (2) data in lower levels will have larger sequence numbers，更低层会有更大的key
         // (3) data in layers that are being compacted here and have
         //     smaller sequence numbers will be dropped in the next
         //     few iterations of this loop (by rule (A) above).
         // Therefore this deletion marker is obsolete and can be dropped.
+        // 对于这个userkey来说
+        // 1. 更高层没有相同userkey数据了，因此该kTypeDeletion可以删除，否则它要一直compact下去，以删除高层的key
+        // 2. 更低层形同userkey记录会有更大的seq，因此kTypeDeletion drop掉不影响
+        // 3. 而该key所在层后面的相同userkey数据因为有更小的seq，将在后面的迭代被规则A给drop掉, 因此这里kTypeDeletion
+        // drop掉没有问题 因此这里的删除标记kTypeDeletion过时了，可以drop ikey.sequence <=
+        // compact->smallest_snapshot,表示如果当前versions里面还有key，则不能将kTypeDeletion删除。
         drop = true;
       }
 

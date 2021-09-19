@@ -299,7 +299,7 @@ Status Version::Get(const ReadOptions& options, const LookupKey& k, std::string*
     Saver saver;
     GetStats* stats;
     const ReadOptions* options;
-    Slice ikey; // internal_key
+    Slice ikey;  // internal_key
     FileMetaData* last_file_read;
     int last_file_read_level;
 
@@ -837,6 +837,7 @@ Status VersionSet::Recover(bool* save_manifest) {
   }
   current.resize(current.size() - 1);
 
+  // decriptor name, 即当前manifest文件
   std::string dscname = dbname_ + "/" + current;
   SequentialFile* file;
   s = env_->NewSequentialFile(dscname, &file);
@@ -1322,8 +1323,7 @@ void AddBoundaryInputs(const InternalKeyComparator& icmp, const std::vector<File
 // 1. 添加level层边界文件到 c->inputs[0]
 // 2. 根据将要compact的level层[smallest, largest]， 查找level+1层有范围重叠的文件，再添加level+1层边界文件到c->inputs[1]
 // 3. 获取所有输入文件的[smallest, largest]
-// 4. 如果level层还有文件落在所有输入文件的[smallest,
-// largest]范围，并且添加后总大小不超过一次compact的上限（25倍最大文件大小），
+// 4. 如果level层还有文件落在所有输入文件的[smallest,largest]范围，并且添加后总大小不超过一次compact的上限,
 //    并且添加后新的重叠范围不增大level+1层文件个数，则添加level层的新文件，更新相关[smallest, largest]
 // 5. 计算所有重叠的level+2 层文件到 c->grandparents
 void VersionSet::SetupOtherInputs(Compaction* c) {
